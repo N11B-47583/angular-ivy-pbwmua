@@ -9,15 +9,20 @@ export class ListComponent implements OnInit {
 
   constructor() { }
 
-  napisy: string[] = ['tsest','test']
+  napisy: string[] = ['test','test']
   nowyNapis: string = ''
    
   addToList(){
     this.napisy.push(this.nowyNapis);
     this.nowyNapis = '';
   }
-
-  ngOnInit() {
+  removeFromlist(index: number) { // parameterem indeks z ngFor.
+    if (index> -1) {
+      this.napisy.splice(index, 1);
+    }
+    this.napisy
+  }
+   ngOnInit() {
   }
 
 }
