@@ -16,7 +16,7 @@ export class RandomComponent implements OnInit {
   ) {
 
    }
-  /*setNewRandomValue:*/
+  //setNewRandomValue()
   ngOnInit() {
   }
 
