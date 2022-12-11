@@ -1,4 +1,4 @@
 Random component (max = {{max}}) <br>
-<button (click) = "setNewRandomValue()">Losuj</button> {{myNumber}} <span style="color:red;" *ngIf="myNumber < 0.5 * max">mniejszy</span>
-<span style="color:green;" *ngIf="myNumber >= 0.5 * max">mniejszy</span>
+<button (click) = "setNewRandomValue()">Losuj</button> {{myNumber}} <span style="color:red;" *ngIf="myNumber < 0.5 * max">dolna połowa wartości</span>
+<span style="color:green;" *ngIf="myNumber >= 0.5 * max">górna połowa wartości</span>
 <br>
