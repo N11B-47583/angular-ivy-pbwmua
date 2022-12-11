@@ -8,15 +8,26 @@ import {Input} from '@angular/core'
   styleUrls: ['./random.component.css']
 })
 export class RandomComponent implements OnInit {
-  maxNumber = 0;
+  private maxNumber = 0;
   @Input()
   max = 100;
+
+  myNumber = 0
+
   constructor(
     private RandomSerivce:RandomService
   ) {
 
    }
-  //setNewRandomValue()
+  getMaxNumber() {
+    return this.maxNumber
+  }
+  getMax() {
+    return this.max
+  }
+  setNewRandomValue() {
+    this.myNumber = this.RandomSerivce.getRandomNumber(this.max);
+  }
   ngOnInit() {
   }
 

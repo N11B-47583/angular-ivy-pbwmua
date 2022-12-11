@@ -9,6 +9,6 @@ export class RandomService {
   }
 
   public getRandomNumber(max: number): number {
-    return Math.random() * max;
+    return Math.floor(Math.random() * max);
   }
 }
