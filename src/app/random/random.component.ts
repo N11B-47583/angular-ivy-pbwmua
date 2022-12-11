@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { RandomService } from './random.service';
-import {Input} from '@angular/core'
 
 @Component({
   selector: 'app-random',
@@ -19,12 +18,6 @@ export class RandomComponent implements OnInit {
   ) {
 
    }
-  getMaxNumber() {
-    return this.maxNumber
-  }
-  getMax() {
-    return this.max
-  }
   setNewRandomValue() {
     this.myNumber = this.RandomSerivce.getRandomNumber(this.max);
   }
