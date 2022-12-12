@@ -11,8 +11,11 @@ export class ListComponent implements OnInit {
 
   napisy: string[] = ['test','test']
   nowyNapis: string = ''
-    
+  notify = new Notification('Hi there!')
   addToList(){
+    if (this.nowyNapis == '') {
+      alert("Wartość nie może być pusta.");
+    } else
     this.napisy.push(this.nowyNapis);
     this.nowyNapis = '';
   }
