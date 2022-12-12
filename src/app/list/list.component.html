@@ -1,7 +1,6 @@
 <div>List component<br>
-<input type="text" [(ngModel)]="nowyNapis" />
+<input id = "numb" type="text" [(ngModel)]="nowyNapis" />
 <button (click) = "addToList()">Dodaj</button>
-
 <ul>
 <li *ngFor="let item of napisy; let i = index "> <!--index as i-->
 {{item}}
