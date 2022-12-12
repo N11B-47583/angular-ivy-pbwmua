@@ -11,13 +11,11 @@ export class RandomComponent implements OnInit {
   @Input()
   max = 100;
 
-  myNumber = 0
+  myNumber = 0;
 
   constructor(
     private RandomSerivce:RandomService
-  ) {
-
-   }
+  ) {}
   setNewRandomValue() {
     this.myNumber = this.RandomSerivce.getRandomNumber(this.max);
   }
