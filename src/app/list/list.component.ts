@@ -11,12 +11,12 @@ export class ListComponent implements OnInit {
 
   napisy: string[] = ['test','test']
   nowyNapis: string = ''
-   
+    
   addToList(){
     this.napisy.push(this.nowyNapis);
     this.nowyNapis = '';
   }
-  removeFromlist(index: number) { // parameterem indeks z ngFor.
+  removeFromlist(index: number) {
     if (index> -1) {
       this.napisy.splice(index, 1);
     }

@@ -3,7 +3,7 @@
 <button (click) = "addToList()">Dodaj</button>
 
 <ul>
-<li *ngFor="let item of napisy; index as i">
+<li *ngFor="let item of napisy; let i = index "> <!--index as i-->
 {{item}}
 <a (click)="removeFromlist(i)" href="#">usuń</a>
 </li>
