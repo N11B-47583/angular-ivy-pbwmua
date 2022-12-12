@@ -9,23 +9,21 @@ export class ListComponent implements OnInit {
 
   constructor() { }
 
-  napisy: string[] = ['test','test']
-  nowyNapis: string = ''
-  notify = new Notification('Hi there!')
+  lista: string[] = ['test','test']
+  element: string = ''
+ 
   addToList(){
-    let x = (<HTMLInputElement>document.getElementById("numb")).value;
-    let info
-    if (this.nowyNapis == '') {
+    if (this.element == '') {
       alert("Wartość nie może być pusta")
     } else
-    this.napisy.push(this.nowyNapis);
-    this.nowyNapis = '';
+    this.lista.push(this.element);
+    this.element = '';
     }
   removeFromlist(index: number) {
     if (index> -1) {
-      this.napisy.splice(index, 1);
+      this.lista.splice(index, 1);
     }
-    this.napisy
+    this.lista
   }
    ngOnInit() {
   }
