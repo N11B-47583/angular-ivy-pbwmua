@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
   constructor() {}
 
-  lista: string[] = ['item no. 1'];
+  lista: string[] = [];
   element: string = '';
 
   addToList() {
