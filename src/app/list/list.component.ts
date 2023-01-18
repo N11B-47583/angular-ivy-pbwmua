@@ -3,29 +3,25 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
 })
 export class ListComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  lista: string[] = ['item no. 1'];
+  element: string = '';
 
-  lista: string[] = ['test','test']
-  element: string = ''
- 
-  addToList(){
+  addToList() {
     if (this.element == '') {
-      alert("Wartość nie może być pusta")
-    } else
-    this.lista.push(this.element);
+      alert('Wartość nie może być pusta');
+    } else this.lista.push(this.element);
     this.element = '';
-    }
+  }
   removeFromlist(index: number) {
-    if (index> -1) {
+    if (index > -1) {
       this.lista.splice(index, 1);
     }
-    this.lista
+    this.lista;
   }
-   ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
